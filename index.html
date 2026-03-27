@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Minecraft PE | KHOMODFREE 🚀</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #121212; color: white; text-align: center; }
+        input { margin-bottom: 10px; padding: 12px; width: 80%; border-radius: 8px; border: none; }
+        button { padding: 12px 25px; background: #4CAF50; color: white; border: none; border-radius: 8px; font-weight: bold; }
+        .mod-item { background: #1e1e1e; padding: 15px; margin-top: 15px; border-radius: 10px; border-left: 5px solid #4CAF50; text-align: left; }
+        a { color: #00ff00; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h2>Đăng Mod Minecraft 😎</h2>
+    <input id="name" placeholder="Tên Mod..."><br>
+    <input id="link" placeholder="Link tải (Mediafire/Drive)..."><br>
+    <button onclick="addMod()">ĐĂNG LÊN</button>
+    <hr>
+    <div id="list"></div>
+    <script>
+        function addMod() {
+            let n = document.getElementById('name').value;
+            let l = document.getElementById('link').value;
+            if(n&&l) {
+                document.getElementById('list').innerHTML += `<div class="mod-item"><b>${n}</b><br><a href="${l}" target="_blank">👉 Nhấn để tải</a></div>`;
+                document.getElementById('name').value = ""; document.getElementById('link').value = "";
+            } else { alert("Nhập đủ tên và link đã sếp ơi!"); }
+        }
+    </script>
+</body>
+</html>
